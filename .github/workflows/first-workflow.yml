@@ -2,7 +2,7 @@ name: first workflow
 on: workflow_dispatch
 jobs:
     first-job:
-    runs-on: ubuntu-latest
-    steps:
-        - name: first step
-          run: echo "this is my first workflow"
+        runs-on: ubuntu-latest
+        steps:
+            - name: first step
+              run: echo "this is my first workflow"
