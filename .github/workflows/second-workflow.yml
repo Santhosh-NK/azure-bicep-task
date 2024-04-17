@@ -1,0 +1,11 @@
+name: first-pipeline
+on:
+    workflow-dispatch
+jobs:
+    checkout:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout the repository
+              uses: actions/checkout@v4
+            - name: list the directory
+              run: ls
