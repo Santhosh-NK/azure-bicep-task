@@ -28,4 +28,7 @@ jobs:
                 - name: deploy bicep file 
                   run: |
                         az deployment group create -g azuretasks -f storage.bicep
+                - name: list resources
+                  run: |
+                       az resource --list
                     
