@@ -15,4 +15,4 @@ jobs:
                     azcliversion: latest
                     inlinescript: az account show
             - name: delete the resource
-              run: az group delete -g azuretasks
+              run: az group delete -g azuretasks --yes
