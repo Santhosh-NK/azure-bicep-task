@@ -1,6 +1,6 @@
 name: first-pipeline
 on:
-    workflow_dispatch
+    main
 jobs:
     checkout:
         runs-on: ubuntu-latest
