@@ -31,9 +31,8 @@ jobs:
                 - name: deploy second resource
                        
                   run:  az deployment group create -g azuretasks -f ipaddress.bicep
-                  
-                - name: delete
-                  run: az resource delete -g azuretasks -n santhosh1508ghjklm0
+
+               
                 
 
           
