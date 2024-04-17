@@ -1,6 +1,6 @@
 name: first-pipeline
 on:
-    main
+    push
 jobs:
     checkout:
         runs-on: ubuntu-latest
