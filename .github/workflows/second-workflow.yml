@@ -22,3 +22,8 @@ jobs:
                   with:
                        azcliversion: latest
                        inlineScript: az account show
+
+                - name: deploy bicep file 
+                  run: |
+                        az deployment group create -g azuretasks -f storage.bicep
+                    
