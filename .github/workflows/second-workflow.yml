@@ -1,6 +1,6 @@
-name: first-pipeline
+name: create-pipeline
 on:
-    push
+    workflow_dispatch
 jobs:
     checkout:
         runs-on: ubuntu-latest

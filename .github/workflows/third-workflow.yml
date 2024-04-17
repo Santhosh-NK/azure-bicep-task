@@ -1,18 +1,18 @@
 name: Delete-pipeline
-on: push
+on: workflow_dispatch
 jobs:
-    deletethepipeline:
+    delete_the_resource:
         runs-on: ubuntu-latest
         steps:
-            - name: azurelogin
+            - name: Azurelogin
               uses: azure/login@v2
               with:
-                creds: ${{secrets.AZURE_CREDENTIALS}}
-
-            - name: cli setup
+                creds:  ${{ secrets.AZURE_CREDENTIALS }}
+            - name: azureclisetup
               uses: azure/cli@v1
-              with: 
-                    azcliversion: latest
-                    inlinescript: az account show
+              with:
+                azcliversion: latest
+                inlinescript: az account show
             - name: delete the resource
-              run: az group delete -g azuretasks
+              run: az resource delete -g azuretasks -n santhosh1508ghjklm0 --resource-type 'Microsoft.Storage/storageAccounts'
+              

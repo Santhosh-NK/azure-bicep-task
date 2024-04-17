@@ -1,4 +1,4 @@
-name: first workflow
+name: Initial Pipeline
 on: workflow_dispatch
 jobs:
     first-job:
