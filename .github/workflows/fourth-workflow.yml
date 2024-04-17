@@ -1,4 +1,4 @@
-name: Delete-pipeline
+name: Delete-pipeline-resourcegroup
 on: workflow_dispatch
 jobs:
     deletethepipeline:
