@@ -1,7 +1,7 @@
 name: Delete-pipeline
 on: push
 jobs:
-    delete the pipeline:
+    deletethepipeline:
         runs-on: ubuntu-latest
         steps:
             - name: azurelogin
