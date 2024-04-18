@@ -46,7 +46,7 @@ module nic 'modules/nic.bicep'={
   name: 'networkinterfacecard'
   params: {
     location: location
-    name: name
+    name: nicname
     subnetid: vnet.outputs.subnetid
     ipaddressid:ip.outputs.ipaddressid  }
 }
@@ -59,7 +59,7 @@ module vm 'modules/vm.bicep'={
     adminusername: adminusername
     computername: computername
    
-    name: name
+    name: vmname
     networkid: nic.outputs.nic
     location:location
   }
