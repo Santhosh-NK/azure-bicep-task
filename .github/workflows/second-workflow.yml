@@ -30,8 +30,8 @@ jobs:
                 - name: delete the resource          
                   run: az resource delete -g azuretasks -n storageaccout1508io --resource-type 'Microsoft.Storage/storageAccounts'
                   
-                - name: delete the resource
-                  run: az group delete -g azuretasks --yes
+                # - name: delete the resource
+                #   run: az group delete -g azuretasks --yes
     
                
                 
