@@ -28,7 +28,7 @@ jobs:
                   run:  az deployment group create -g azuretasks -f ipaddress.bicep
 
                 - name: delete the resource          
-                  run: az resource delete -g azuretasks -n storageaccout1508io --resource-type 'Microsoft.Storage/storageAccounts'
+                  run: az resource delete -g azuretasks -n storage1508sn --resource-type 'Microsoft.Storage/storageAccounts'
                   
                 # - name: delete the resource
                 #   run: az group delete -g azuretasks --yes
