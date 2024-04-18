@@ -1,5 +1,5 @@
 resource publicIPAddress 'Microsoft.Network/publicIPAddresses@2023-05-01' = {
-  name: 'publicip1508snr'
+  name: 'ipaddress1508pn'
   location: resourceGroup().location
   properties: {
     publicIPAllocationMethod: 'Dynamic'

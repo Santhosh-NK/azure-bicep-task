@@ -1,5 +1,5 @@
 resource storageaccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
-  name: 'santhosh1508ghjklm0'
+  name: 'storageaccout1508io'
   location: 'eastus'
   kind: 'StorageV2'
   sku: {
