@@ -18,6 +18,9 @@ jobs:
                   with:
                        azcliversion: latest
                        inlineScript: az account show
+                       
+                - name: create resource group
+                  run: az group create -n azuretasks -l eastus
 
                 - name: deploy bicep file 
                   run:  az deployment group create -g azuretasks -f storage.bicep
