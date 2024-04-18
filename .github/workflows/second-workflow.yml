@@ -2,14 +2,8 @@ name: create-pipeline
 on:
     workflow_dispatch
 jobs:
-    checkout:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout the repository
-              uses: actions/checkout@v4
-            - name: list the directory
-              run: ls
-    build-and-deploy:
+    
+    deploy_the_resources:
             runs-on: ubuntu-latest
             steps:
                 - name: checkout the repository
@@ -26,12 +20,16 @@ jobs:
                        inlineScript: az account show
 
                 - name: deploy bicep file 
-                  run: |
-                        az deployment group create -g azuretasks -f storage.bicep
-                - name: deploy second resource
-                       
+                  run:  az deployment group create -g azuretasks -f storage.bicep
+                - name: deploy second resource                       
                   run:  az deployment group create -g azuretasks -f ipaddress.bicep
 
+                - name: delete the resource          
+                  run: az resource delete -g azuretasks -n storageaccout1508io --resource-type 'Microsoft.Storage/storageAccounts'
+                  
+                - name: delete the resource
+                  run: az group delete -g azuretasks --yes
+    
                
                 
 
