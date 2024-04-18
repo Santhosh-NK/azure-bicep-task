@@ -15,5 +15,5 @@ jobs:
                 inlinescript: az account show
             - name: delete the resource
             
-              run: az resource delete -g azuretasks -n --resource-type 'Microsoft.Storage/storageAccounts'
+              run: az resource delete -g azuretasks -n santhosh1508ghjklm0 --resource-type 'Microsoft.Storage/storageAccounts'
               
