@@ -2,8 +2,10 @@
 param name string
 @description('Enter the Resource Location')
 param location string
-@('Enter the ')
+@description('Enter the subnet id')
 param subnetid string
+@description('Enter the public ip address id')
+param ipaddressid string
 
 resource networkInterface 'Microsoft.Network/networkInterfaces@2020-11-01' = {
   name: name
@@ -13,6 +15,9 @@ resource networkInterface 'Microsoft.Network/networkInterfaces@2020-11-01' = {
       {
         name: 'ipconfig-az-bicep'
         properties: {
+          publicIPAddress:{
+            id:ipaddressid
+          }
           privateIPAllocationMethod: 'Dynamic'
           subnet: {
             id: subnetid

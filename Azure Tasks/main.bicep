@@ -20,6 +20,15 @@ param computername string
 var vnetname = '${name}virtualnetwork'
 var nicname = '${name}interfacecard'
 var vmname ='${name}virtualmachine'
+var ipaddressname='${name}ipaddress'
+
+module ip 'modules/publicip.bicep'={
+  name: 'ipaddress'
+  params: {
+    location: location
+    name: ipaddressname
+  }
+}
 
 module vnet 'modules/vnet.bicep'={
   name: 'virtualnetwork'
@@ -31,15 +40,15 @@ module vnet 'modules/vnet.bicep'={
 }
 
 
+
 module nic 'modules/nic.bicep'={
   dependsOn:[vnet]
   name: 'networkinterfacecard'
   params: {
     location: location
-    name: nicname
-    
+    name: name
     subnetid: vnet.outputs.subnetid
-  }
+    ipaddressid:ip.outputs.ipaddressid  }
 }
 
 module vm 'modules/vm.bicep'={
