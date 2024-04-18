@@ -13,17 +13,17 @@ jobs:
                   with:
                         creds: ${{ secrets.AZURE_CREDENTIALS }}
         
-                - name: Azure CLI script
-                  uses: azure/CLI@v1
-                  with:
-                       azcliversion: latest
-                       inlineScript: az account show
-                       
+                # - name: Azure CLI script
+                #   uses: azure/CLI@v1
+                #   with:
+                #        azcliversion: latest
+                #        inlineScript: az account show
+
                 - name: create resource group
                   run: az group create -n azuretasks -l eastus
 
                 - name: deploy bicep file 
-                  run:  az deployment group create -g azuretasks -f storage.bicep
+                  run:  az deployment group create -g azuretasks -f storageaccount.bicep
                 - name: deploy second resource                       
                   run:  az deployment group create -g azuretasks -f ipaddress.bicep
 
