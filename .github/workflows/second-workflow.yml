@@ -24,7 +24,7 @@ jobs:
 
                 - name: deploy first resource
                   run:  az deployment group create -g azuretasks -f storageaccount.bicep
-                  
+
                 - name: deploy second resource                       
                   run:  az deployment group create -g azuretasks -f ipaddress.bicep
 
