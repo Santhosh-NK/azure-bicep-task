@@ -42,7 +42,7 @@ module vnet 'modules/vnet.bicep'={
 
 
 module nic 'modules/nic.bicep'={
-  dependsOn:[vnet]
+  // dependsOn:[vnet]
   name: 'networkinterfacecard'
   params: {
     location: location
@@ -52,7 +52,7 @@ module nic 'modules/nic.bicep'={
 }
 
 module vm 'modules/vm.bicep'={
-  dependsOn:[nic]
+  // dependsOn:[nic]
   name: vmname
   params: {
     adminpassword: adminpassword
