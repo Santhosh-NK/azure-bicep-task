@@ -12,15 +12,9 @@ jobs:
                 - uses: azure/login@v2
                   with:
                         creds: ${{ secrets.AZURE_CREDENTIALS }}
-        
-                # - name: Azure CLI script
-                #   uses: azure/CLI@v1
-                #   with:
-                #        azcliversion: latest
-                #        inlineScript: az account show
-
+                      
                 - name: create resource group
-                  run: az group create -n azuretasks -l eastus
+                  run: az group create -n azuretasks -l eastus    
 
                 - name: deploy first resource
                   run:  az deployment group create -g azuretasks -f storageaccount.bicep
@@ -31,12 +25,10 @@ jobs:
                 - name: delete the resource          
                   run: az resource delete -g azuretasks -n storage1508sn --resource-type 'Microsoft.Storage/storageAccounts'
                   
-                # - name: delete the resource
-                #   run: az group delete -g azuretasks --yes
-    
+               
                
                 
-
+                          
           
                   
                     
