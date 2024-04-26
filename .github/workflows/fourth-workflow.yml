@@ -8,11 +8,6 @@ jobs:
               uses: azure/login@v2
               with:
                 creds: ${{secrets.AZURE_CREDENTIALS}}
-
-            - name: cli setup
-              uses: azure/cli@v1
-              with: 
-                    azcliversion: latest
-                    inlinescript: az account show
+                
             - name: delete the resource
               run: az group delete -g azuretasks --yes
