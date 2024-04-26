@@ -25,9 +25,6 @@ jobs:
                 - name: delete the resource          
                   run: az resource delete -g azuretasks -n storage1508sn --resource-type 'Microsoft.Storage/storageAccounts'
                   
-               
-               
-                
                           
           
                   
