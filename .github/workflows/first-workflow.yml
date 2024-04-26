@@ -9,4 +9,4 @@ jobs:
             - name: checkout the repository
               uses: actions/checkout@v4
             - name: list the directory
-              run: ls dir
+              run: ls 
