@@ -8,11 +8,7 @@ jobs:
               uses: azure/login@v2
               with:
                 creds:  ${{ secrets.AZURE_CREDENTIALS }}
-            - name: azureclisetup
-              uses: azure/cli@v1
-              with:
-                azcliversion: latest
-                inlinescript: az account show
+            
             - name: delete the resource
             
               run: az resource delete -g azuretasks -n santhosh1508ghjklm0 --resource-type 'Microsoft.Storage/storageAccounts'
