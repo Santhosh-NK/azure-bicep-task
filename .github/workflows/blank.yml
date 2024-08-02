@@ -33,7 +33,7 @@ jobs:
       - name: docker images
         run: sudo docker pull nginx
       - name: docker run nginx
-        run: sudo docker run -p 80:80 nginx
+        run: sudo docker run -p 80:80 -d nginx
       
 
       # Runs a set of commands using the runners shell
