@@ -25,6 +25,8 @@ jobs:
         run: echo Hello, world!
       - name: current working directory
         run: pwd
+      - name: delete the fila 
+        run: rm -rf azure-bicep-task
       
 
       # Runs a set of commands using the runners shell
