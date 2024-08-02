@@ -27,7 +27,7 @@ jobs:
         run: pwd
         
       - name: create a working directory 
-        run: mkdir priyasanthosh
+        run: mkdir priyasanthosh1508
       - name: list the directory 
         run: dir -l
       - name: docker images
