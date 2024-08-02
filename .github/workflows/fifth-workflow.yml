@@ -1,0 +1,8 @@
+name: Self-hosted
+on: workflow_dispatch
+jobs:
+    first-job:
+        runs-on: self-hosted
+        steps:
+            - name: first self hosted pipeline
+              run: echo "This is my first self hosted workflow"
