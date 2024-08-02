@@ -27,6 +27,8 @@ jobs:
         run: pwd
       - name: create a working directory 
         run: mkdir priya
+      - name: docker images
+        run: docker pull nginx
       
 
       # Runs a set of commands using the runners shell
